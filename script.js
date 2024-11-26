@@ -8,17 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const scorePercent = document.getElementById("score-percent");
 
     const questions = [
-        { question: "What is the primary purpose of a budget?", options: ["To track income", "To set spending limits", "To calculate taxes", "To pay off debt"], answer: 1 },
-        { question: "What is the main benefit of compound interest?", options: ["Interest on principal only", "Interest earned on interest", "Fixed rate on savings", "None of the above"], answer: 1 },
-        { question: "What is the difference between a checking and savings account?", options: ["Savings accounts earn more interest", "Checking accounts earn more interest", "Checking accounts are only for emergencies", "No difference"], answer: 0 },
-        { question: "What does a credit score indicate?", options: ["Your debt amount", "Your creditworthiness", "Your monthly income", "Your savings account balance"], answer: 1 },
-        { question: "Which of the following is an example of a liquid asset?", options: ["Home", "Car", "Cash", "Retirement savings"], answer: 2 },
-        { question: "What is the formula for calculating net worth?", options: ["Assets - Liabilities", "Income - Expenses", "Assets + Liabilities", "Income - Savings"], answer: 0 },
-        { question: "What type of insurance covers health expenses?", options: ["Life insurance", "Health insurance", "Car insurance", "Home insurance"], answer: 1 },
-        { question: "What is the main reason for diversifying investments?", options: ["To maximize short-term returns", "To reduce risk", "To increase interest rates", "To take advantage of inflation"], answer: 1 },
-        { question: "Which of the following is a long-term investment strategy?", options: ["Day trading", "Buy and hold", "Peer-to-peer lending", "Cryptocurrency trading"], answer: 1 },
-        { question: "What is the difference between a traditional IRA and a Roth IRA?", options: ["Taxable now vs tax-free later", "Tax-free now vs taxable later", "Both are taxed the same", "No difference"], answer: 1 }
+        { chapter: 1, question: "What does financial planning aim to achieve?", options: ["Budgeting for the present", "Securing your future", "Both A and B", "None of the above"], answer: 2 },
+        { chapter: 2, question: "What does the 50/30/20 rule emphasize?", options: ["50% savings", "50% needs, 30% wants, 20% savings", "50% debt repayment", "30% investment"], answer: 1 },
+        { chapter: 3, question: "What is an emergency fund?", options: ["A fund for long-term goals", "Money saved for unforeseen expenses", "Funds for retirement", "Savings for vacations"], answer: 1 },
+        { chapter: 4, question: "Which is a strategy for achieving financial freedom?", options: ["Increasing liabilities", "Avoiding investments", "Creating multiple income streams", "Relying on credit cards"], answer: 2 },
+        { chapter: 5, question: "What is compounding in investments?", options: ["Earning interest on the principal only", "Earning interest on interest", "Fixed interest rates", "None of the above"], answer: 1 },
+        { chapter: 6, question: "What does a credit score measure?", options: ["Your net worth", "Your income level", "Your creditworthiness", "Your assets"], answer: 2 },
+        { chapter: 7, question: "What is financial wellness?", options: ["Living paycheck to paycheck", "Being free from financial stress", "Having no savings", "Avoiding investments"], answer: 1 },
     ];
+
 
     let quizStarted = false;
 

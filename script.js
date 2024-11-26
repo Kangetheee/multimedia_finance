@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const questions = [
         { question: "What is the primary purpose of a budget?", options: ["To track income", "To set spending limits", "To calculate taxes", "To pay off debt"], answer: 1 },
         { question: "What is the main benefit of compound interest?", options: ["Interest on principal only", "Interest earned on interest", "Fixed rate on savings", "None of the above"], answer: 1 },
-        // Add remaining questions here...
+        { question: "What is the difference between a checking and savings account?", options: ["Savings accounts earn more interest", "Checking accounts earn more interest", "Checking accounts are only for emergencies", "No difference"], answer: 0 },
+        { question: "What does a credit score indicate?", options: ["Your debt amount", "Your creditworthiness", "Your monthly income", "Your savings account balance"], answer: 1 },
+        { question: "Which of the following is an example of a liquid asset?", options: ["Home", "Car", "Cash", "Retirement savings"], answer: 2 },
+        { question: "What is the formula for calculating net worth?", options: ["Assets - Liabilities", "Income - Expenses", "Assets + Liabilities", "Income - Savings"], answer: 0 },
+        { question: "What type of insurance covers health expenses?", options: ["Life insurance", "Health insurance", "Car insurance", "Home insurance"], answer: 1 },
+        { question: "What is the main reason for diversifying investments?", options: ["To maximize short-term returns", "To reduce risk", "To increase interest rates", "To take advantage of inflation"], answer: 1 },
+        { question: "Which of the following is a long-term investment strategy?", options: ["Day trading", "Buy and hold", "Peer-to-peer lending", "Cryptocurrency trading"], answer: 1 },
+        { question: "What is the difference between a traditional IRA and a Roth IRA?", options: ["Taxable now vs tax-free later", "Tax-free now vs taxable later", "Both are taxed the same", "No difference"], answer: 1 }
     ];
 
     let quizStarted = false;

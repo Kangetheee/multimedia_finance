@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function loadQuiz() {
-        quizContainer.innerHTML = ""; // Clear existing content
+        quizContainer.innerHTML = ""; 
+        // Clear existing content
         questions.forEach((q, index) => {
             const questionDiv = document.createElement("div");
             questionDiv.innerHTML = `
@@ -71,13 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return acc + (answer === questions[index].answer ? 1 : 0);
         }, 0);
 
-        const percentage = Math.round((score / questions.length) * 100); // Calculate percentage
+        const percentage = Math.round((score / questions.length) * 100); 
+        // Calculate percentage
 
         // Display score
         scorePercent.textContent = `${percentage}%`;
         quizScore.classList.remove("hidden");
 
-        if (percentage < 70) { // Retake the quiz if below 70%
+        if (percentage < 70) { 
+            // Retake the quiz if below 70%
             alert("Your score is too low. Please retake the course.");
             video.currentTime = 0;
             video.play();
@@ -87,21 +90,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// script.js
-
 // Infographic Chart
 const ctx = document.getElementById("infographic-chart").getContext("2d");
 
 const infographicChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Savings', 'Investments', 'Debt', 'Emergency Fund'],
+        labels: ['Savings (40%)', 'Investments (30%)', 'Debt (20%)', 'Emergency Fund (10%)'],
         datasets: [{
             label: 'Financial Distribution',
             data: [40, 30, 20, 10],
-            backgroundColor: ['#4caf50', '#ff9800', '#f44336', '#2196f3'],
+            backgroundColor: ['#66bb6a', '#ffa726', '#ef5350', '#42a5f5'], // Updated color palette
             borderColor: ['#fff', '#fff', '#fff', '#fff'],
-            borderWidth: 2
+            borderWidth: 2,
         }]
     },
     options: {
@@ -109,14 +110,45 @@ const infographicChart = new Chart(ctx, {
         plugins: {
             legend: {
                 position: 'top',
+                labels: {
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    color: '#333'
+                }
             },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        const value = context.raw;
+                        const label = context.label.split(' ')[0]; // Extract category name
+                        return `${label}: ${value}% of total`;
+                    }
+                }
+            },
+            title: {
+                display: true,
+                text: 'Your Financial Distribution',
+                font: {
+                    size: 20,
+                    weight: 'bold'
+                },
+                color: '#333'
+            }
         },
         animation: {
             animateScale: true,
             animateRotate: true
+        },
+        hover: {
+            onHover: function(e, elements) {
+                e.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+            }
         }
     }
 });
+
 
 // Loan Calculator
 document.getElementById('calculate-loan').addEventListener('click', function () {

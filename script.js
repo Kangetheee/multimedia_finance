@@ -107,7 +107,7 @@ const infographicChart = new Chart(ctx, {
         datasets: [{
             label: "Financial Distribution",
             data: [40, 30, 20, 10],
-            backgroundColor: ["#66bb6a", "#ffa726", "#ef5350", "#42a5f5"],
+            backgroundColor: ["#4caf50", "#ff9800", "#f44336", "#2196f3"], // New color scheme
             borderColor: ["#fff", "#fff", "#fff", "#fff"],
             borderWidth: 2
         }]
@@ -127,6 +127,7 @@ const infographicChart = new Chart(ctx, {
         }
     }
 });
+
 
 // Loan Calculator
 document.getElementById("calculate-loan").addEventListener("click", () => {

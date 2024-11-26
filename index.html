@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For Infographics -->
+</head>
+<body>
+    <header>
+        <h1>Financial Literacy 101</h1>
+        <nav>
+            <a href="#video-section">Start Course</a>
+            <a href="#quiz-section">Take Quiz</a>
+            <a href="#calculators-section">Calculators</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Video Section -->
+        <section id="video-section">
+            <h2>Interactive Video</h2>
+            <div class="video-container">
+                <video id="financial-video" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p id="quiz-prompt" class="hidden">Time for a question!</p>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="hidden">
+            <h2>Quiz</h2>
+            <div id="quiz-container">
+                <!-- Questions will be inserted dynamically -->
+            </div>
+            <button id="submit-quiz" class="hidden">Submit Answers</button>
+            <div id="quiz-score" class="hidden">
+                <h3>Your Score: <span id="score-percent"></span></h3>
+            </div>
+        </section>
+
+        <!-- Infographics Section -->
+        <section id="infographics-section">
+            <h2>Financial Infographics</h2>
+            <canvas id="infographic-chart"></canvas>
+        </section>
+
+        <!-- Financial Calculators Section -->
+        <section id="calculators-section">
+            <h2>Financial Calculators</h2>
+            <div id="loan-calculator">
+                <h3>Loan Calculator</h3>
+                <label for="loan-amount">Loan Amount:</label>
+                <input type="number" id="loan-amount" placeholder="Amount ($)">
+                <label for="loan-term">Loan Term (years):</label>
+                <input type="number" id="loan-term" placeholder="Years">
+                <label for="loan-rate">Interest Rate (%):</label>
+                <input type="number" id="loan-rate" placeholder="Annual Interest Rate">
+                <button id="calculate-loan">Calculate</button>
+                <p id="loan-result"></p>
+            </div>
+
+            <div id="savings-calculator">
+                <h3>Savings Calculator</h3>
+                <label for="initial-savings">Initial Savings:</label>
+                <input type="number" id="initial-savings" placeholder="Amount ($)">
+                <label for="monthly-contribution">Monthly Contribution:</label>
+                <input type="number" id="monthly-contribution" placeholder="Contribution ($)">
+                <label for="savings-rate">Annual Interest Rate (%):</label>
+                <input type="number" id="savings-rate" placeholder="Interest Rate">
+                <label for="savings-years">Years to Save:</label>
+                <input type="number" id="savings-years" placeholder="Years">
+                <button id="calculate-savings">Calculate</button>
+                <p id="savings-result"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Financial Literacy Project</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
